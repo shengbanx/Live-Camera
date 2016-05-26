@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta name="viewport" content="width=320, initial-scale=1"/>
-	<title>CCGV在(ji)线(qing)直播</title>
+	<title>Live Camera</title>
 	<style type="text/css">
 	body h1{font:38px/1.8em Hiragino Mincho ProN, STSong, serif!important;color:#2c3e50;}
 		body {
@@ -33,7 +33,7 @@
 		ctx.fillText('加载中...', canvas.width/2-100, canvas.height/3);
 
 		// Setup the WebSocket connection and start the player
-		var client = new WebSocket( 'ws://192.168.0.70:8084/' );
+		var client = new WebSocket( 'ws://192.168.1.102:8084/' );
 		var player = new jsmpeg(client, {canvas:canvas});
 	</script>
 </body>
