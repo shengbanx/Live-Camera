@@ -14,7 +14,7 @@
 	</style>
 </head>
 <body>
-<h1>虚不虚</h1>		
+<h1>Live-Streaming</h1>		
 	<canvas id="videoCanvas" width="640" height="480">
 		<p>
 			Please use a browser that supports the Canvas Element, like
@@ -33,7 +33,7 @@
 		ctx.fillText('加载中...', canvas.width/2-100, canvas.height/3);
 
 		// Setup the WebSocket connection and start the player
-		var client = new WebSocket( 'ws://192.168.1.102:8084/' );
+		var client = new WebSocket( 'ws://192.168.0.70:8084/' );
 		var player = new jsmpeg(client, {canvas:canvas});
 	</script>
 </body>
