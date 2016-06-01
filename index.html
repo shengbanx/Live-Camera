@@ -2,20 +2,43 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta name="viewport" content="width=320, initial-scale=1"/>
-	<title>佐助的日常</title>
-	<style type="text/css">
-	body h1{font:38px/1.8em "Helvetica Neue", Helvetica, sans-serif!important;color:#3385ff;}
-		body {
-			background: #000;
-			text-align: center;
-			margin-top: 10%;
-		}	
-	</style>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Live Camera">
+    <link href="http://shengbanx.qiniudn.com/uploads/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet "type="text/css" href="style.css">
+    <script type="text/javascript" src="jsmpg.js"></script>
+    <title>你看到我家的小兔了吗</title>
+
+    
+    <!-- weixin picture-->
+    <div id='wx_pic' style='margin:0 auto;display:none;'>
+    <img src='http://shengbanx.qiniudn.com/wx/live/300x300.jpg' />
+    </div>
 </head>
 <body>
-		
-	<canvas id="videoCanvas" width="640" height="480">
+
+    <div class="bg_grass">
+    <p style="margin:35% 5%;color:#5c5c63">#凡人，又在偷窥本大爷</p>
+    </div>
+
+    <div class="tv">
+    <div class="hand">
+	</div>
+	</div>
+    
+    <div class="poly1">
+	</div>
+
+	<div class="poly2">
+	</div>
+
+	<div class="poly3">
+	</div>
+
+	<div style="width:320px;position:relative;margin:64% auto;">
+		<canvas id="videoCanvas" width="320" height="240">
 		<p>
 			Please use a browser that supports the Canvas Element, like
 			<a href="http://www.google.com/chrome">Chrome</a>,
@@ -23,18 +46,25 @@
 			<a href="http://www.apple.com/safari/">Safari</a> or Internet Explorer 10
 		</p>
 	</canvas>
-	<script type="text/javascript" src="jsmpg.js"></script>
+	</div>
+
+
+    
+	
+    
+
 	<script type="text/javascript">
 		// Show loading notice
 		var canvas = document.getElementById('videoCanvas');
 		var ctx = canvas.getContext('2d');
-		ctx.fillStyle = '#444';
-		ctx.font="20px serif";
+		ctx.fillStyle = '#fafafa';
+		ctx.font="20px Helvetica Neue";
 		ctx.fillText('加载中...', canvas.width/2-100, canvas.height/3);
 
 		// Setup the WebSocket connection and start the player
-		var client = new WebSocket( 'ws://101.106.100.249:8084/' );
+		var client = new WebSocket( 'ws://10.14.213.185:8084/' );
 		var player = new jsmpeg(client, {canvas:canvas});
 	</script>
+
 </body>
 </html>

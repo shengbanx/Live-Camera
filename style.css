@@ -1,0 +1,316 @@
+body {
+  background: #9acae0;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+body, h1, h2, h3, h4, h5, p{
+  font-family: "Noto Sans CJK SC", "Microsoft YaHei", "微软雅黑","Helvetica Neue",Helvetica,sans-serif;
+}
+
+body.loading main {
+  display: none;
+}
+#loading-indicator {
+  display: none;
+}
+body.loading #loading-indicator {
+  display: inline;
+}
+h1 {
+  text-align: center;
+  font-size: 44px;
+}
+#comments {
+  font-style: italic;
+  font-size: 12px;
+}
+#video-streaming {
+  padding-bottom: 10px;
+  padding-top: 12px;
+  background-color: #131313;
+}
+#canvas {
+  -moz-box-shadow: 0px 0px 100px 10px #ccc;
+  -webkit-box-shadow: 0px 0px 100px 10px #ccc;
+  box-shadow: 0px 0px 100px 10px #ccc;
+}
+#img-center {
+  margin-top: 15px;
+  margin-left: 26px;
+  margin-right: 23px;
+}
+#play {
+  display: none;
+}
+body.paused #play {
+  display: inline-block;
+}
+body.paused #pause {
+  display: none;
+}
+/* button 
+---------------------------------------------- */
+ .button {
+  display: inline-block;
+  zoom: 1;
+  /* zoom and *display = ie7 hack for display:inline-block */
+  *display: inline;
+  vertical-align: baseline;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  width: 100px;
+  height: 3em;
+}
+.button:hover {
+  text-decoration: none;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
+/* black */
+ .black {
+  color: #d7d7d7;
+  border: solid 1px #333;
+  background: #333;
+  background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#000));
+  background: -moz-linear-gradient(top, #666, #000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#000000');
+}
+.black:hover {
+  background: #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#000));
+  background: -moz-linear-gradient(top, #444, #000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#000000');
+}
+.black:active {
+  color: #666;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#444));
+  background: -moz-linear-gradient(top, #000, #444);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#666666');
+}
+/* orange */
+ .orange {
+  color: #fef4e9;
+  border: solid 1px #da7c0c;
+  background: #f78d1d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+  background: -moz-linear-gradient(top, #faa51a, #f47a20);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+.orange:hover {
+  background: #f47c20;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+  background: -moz-linear-gradient(top, #f88e11, #f06015);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+.orange:active {
+  color: #fcd3a5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+  background: -moz-linear-gradient(top, #f47a20, #faa51a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+
+
+html,body{
+  height: 100%;
+  max-width: 800px;
+  margin: 0;
+  margin-right: auto;
+    margin-left: auto;
+  padding: 0;
+}
+
+a {
+  color:  #ffc70e;
+}
+
+
+#main {
+ position: relative;
+ height: auto;  
+ min-height:100%;
+ _height:100%; 
+}
+
+#content{  
+   padding-bottom: 60px; 
+}  
+
+.countdownTime {
+  text-align: inherit;
+  padding: 10px;
+  font-size: 22px;
+}
+
+.countdownTimeLabel {
+  color: #ffc70e;
+  font-size: 22px;
+}
+
+.number {
+  font-size: 54px;
+}
+
+.solidbutton-orange {
+  background-color: #ffc70e;
+  color: #511616;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 210px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0 0 .75em rgba(255,165,0,.31);
+  text-shadow: 0px 0px .5px rgba(0,0,0,.5);
+  transform: skewX(-.25rad);
+}
+.solidbutton-orange:hover{
+  background: #fff;
+}
+.straightText {
+  transform: skew(.25rad);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 19px;
+}
+.purchaselink {
+  position: relative;
+
+}
+.amazonlink {
+  font-style: italic;
+}
+#welcome {
+  padding-top: 20%;
+
+}
+#timer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  font-size: 28px;
+  padding: 20% 0 10% 0;
+}
+
+#footer {
+color: #777;
+font-size: 10px;
+line-height: 17px;
+height: 60px;
+padding-bottom: 20px;
+padding-top: 20px;
+position: absolute;
+width: 100%;
+text-align:center;
+bottom: 0;
+left: 0;
+overflow: hidden;
+}
+
+#microcopy {
+  color: #777;
+    font-size: 10px;
+    line-height: 17px;
+}
+
+@media screen and (max-width: 768px) {
+
+
+h1 {
+  font-size: 36px;
+}
+
+}
+
+
+#videoCanvas {
+  padding-bottom: 10px;
+  padding-top: 12px;
+}
+
+.tv{
+  background: url(images/tv.png);
+  width: 100%;
+  height: inherit;
+  background-size: contain;
+  top:10%;
+  overflow: hidden;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.bg_grass {
+    background: url(images/bg.png);
+    width: 100%;
+    background-size: contain;
+    top:64%;
+    overflow: hidden;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+
+.poly1 {
+    background: url(images/poly1.png);
+    width: 79px;
+    height: 90px;
+    background-size: contain;
+    left:4%;
+    top:5%;
+    overflow: hidden;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.poly2 {
+    background: url(images/poly2.png);
+    width: 75px;
+    height: 58px;
+    background-size: contain;
+    right:10%;
+    top:1%;
+    overflow: hidden;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.poly3 {
+    background: url(images/poly3.png);
+    width: 131px;
+    height: 120px;
+    background-size: contain;
+    right:4%;
+    top:15%;
+    overflow: hidden;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.hand {
+    background: url(images/hand.png);
+    width: 238px;
+    height: 59px;
+    background-size: contain;
+    top:23%;
+    left:20%;
+    overflow: hidden;
+    position: absolute;
+    background-repeat: no-repeat;
+}
